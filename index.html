@@ -82,6 +82,51 @@
       padding: 1.5rem 0;
       font-size: 0.9rem;
     }
+    /* Existing global img style */
+    img {
+      display: block;
+      margin: 1rem auto; /* This centers single images */
+    }
+
+/* Override for images inside the new galleries */
+    .image-gallery img {
+  /* Remove the vertical margin, let the container handle spacing */
+      margin: 0; 
+  /* Make the image responsive within its grid column */
+      width: 100%; 
+  /* Ensure consistent height to line up rows */
+      height: 200px; 
+      object-fit: cover; /* Crops the image nicely without stretching */
+    }
+    .image-gallery {
+      display: grid;
+      gap: 10px; /* Space between images */
+      margin-bottom: 2rem; /* Space below the entire gallery */
+    }
+
+/* Set column layout for each category: */
+/* Drawing: 2 columns */
+    .image-gallery[data-category="drawing"] {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+/* Photos: 3 columns (more items, needs more space saving) */
+    .image-gallery[data-category="photos"] {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+/* Traveling: 3 columns */
+    .image-gallery[data-category="travel"] {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+/* Adjust the layout for smaller screens (responsiveness) */
+    @media (max-width: 768px) {
+  /* On smaller screens, use 2 columns for all categories */
+    .image-gallery {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    }
   </style>
 </head>
 <body>
@@ -110,7 +155,55 @@
 
     <section>
       <h2>What I Like</h2>
+      <p>Drawing</p>
       <img src="assets/my_drawing 1.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/my_drawing 2.jpg" alt="Drawing from my computer" width="400" />
+      <p>Taking Random Photos</p>
+      <img src="assets/Random Photo 1.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Random Photo 2.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Random Photo 3.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Random Photo 4.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Random Photo 5.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Random Photo 6.jpg" alt="Drawing from my computer" width="400" />
+      <p>Traveling</p>
+      <img src="assets/Travelling_Athens.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Travelling_Budapest.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Travelling_Finland.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Travelling_Heidelberg.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Travelling_Koln.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Travelling_Munich.jpg" alt="Drawing from my computer" width="400" />
+      <img src="assets/Travelling_Venice.jpg" alt="Drawing from my computer" width="400" />
+    </section>
+
+    <section>
+      <h2>What I Like</h2>
+    
+      <p>Drawing</p>
+      <div class="image-gallery" data-category="drawing">
+        <img src="assets/my_drawing 1.jpg" alt="Digital drawing 1" width="400" />
+        <img src="assets/my_drawing 2.jpg" alt="Digital drawing 2" width="400" />
+      </div>
+    
+      <p>Taking Random Photos</p>
+      <div class="image-gallery" data-category="photos">
+        <img src="assets/Random Photo 1.jpg" alt="Random Photo 1" width="400" />
+        <img src="assets/Random Photo 2.jpg" alt="Random Photo 2" width="400" />
+        <img src="assets/Random Photo 3.jpg" alt="Random Photo 3" width="400" />
+        <img src="assets/Random Photo 4.jpg" alt="Random Photo 4" width="400" />
+        <img src="assets/Random Photo 5.jpg" alt="Random Photo 5" width="400" />
+        <img src="assets/Random Photo 6.jpg" alt="Random Photo 6" width="400" />
+      </div>
+    
+      <p>Traveling</p>
+      <div class="image-gallery" data-category="travel">
+        <img src="assets/Travelling_Athens.jpg" alt="Traveling photo in Athens" width="400" />
+        <img src="assets/Travelling_Budapest.jpg" alt="Traveling photo in Budapest" width="400" />
+        <img src="assets/Travelling_Finland.jpg" alt="Traveling photo in Finland" width="400" />
+        <img src="assets/Travelling_Heidelberg.jpg" alt="Traveling photo in Heidelberg" width="400" />
+        <img src="assets/Travelling_Koln.jpg" alt="Traveling photo in Cologne" width="400" />
+        <img src="assets/Travelling_Munich.jpg" alt="Traveling photo in Munich" width="400" />
+        <img src="assets/Travelling_Venice.jpg" alt="Traveling photo in Venice" width="400" />
+      </div>
     </section>
 
     <section>

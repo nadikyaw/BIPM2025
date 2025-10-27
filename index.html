@@ -21,17 +21,16 @@
       text-align: center;
     }
     nav {
-      background-color: #0a9396; /* Darker secondary color */
+      background-color: #005f73; /* MATCHES HEADER BACKGROUND */
       text-align: center;
       padding: 0.5rem 0;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      /* Makes the navigation bar stay at the top */
       position: sticky; 
       top: 0; 
       z-index: 1000;
     }
     nav a {
-      color: white;
+      color: white; /* MATCHES HEADER FONT COLOR */
       text-decoration: none;
       padding: 0.5rem 1.5rem;
       display: inline-block;
@@ -39,7 +38,7 @@
       transition: background-color 0.3s;
     }
     nav a:hover {
-      background-color: #0077b6; /* Lighter hover effect */
+      background-color: #0a9396; /* Using your h1 color for a nice contrast hover */
       border-radius: 5px;
     }
     main {
@@ -158,7 +157,7 @@
   </nav>
   
   <main>
-    <section>
+    <section id="about-me">
       <h2>About Me</h2>
       <h3>My fullname is Nadi Kyaw. Can call me Nadi.😉✌️</h3>
       <p>M.Sc. Business Intelligence and Process Management<br>
@@ -215,7 +214,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="academic">
       <h2>Academic Journey</h2>
       <h3>🎓 Stops Along the Way</h3>
       <table>

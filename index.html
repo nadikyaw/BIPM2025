@@ -20,6 +20,28 @@
       padding: 2rem;
       text-align: center;
     }
+    nav {
+      background-color: #0a9396; /* Darker secondary color */
+      text-align: center;
+      padding: 0.5rem 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      /* Makes the navigation bar stay at the top */
+      position: sticky; 
+      top: 0; 
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1.5rem;
+      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #0077b6; /* Lighter hover effect */
+      border-radius: 5px;
+    }
     main {
       max-width: 900px;
       margin: 2rem auto;
@@ -130,6 +152,10 @@
   <header>
     <h1>Nadi Kyaw's Story</h1>
   </header>
+  <nav>
+    <a href="#about-me">About Me</a>
+    <a href="#academic">Academic Journey</a>
+  </nav>
   
   <main>
     <section>

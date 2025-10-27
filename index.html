@@ -99,6 +99,9 @@
     }
 
 /* Set column layout for each category: */
+    .image-gallery[data-category="sleeping"] {
+      grid-template-columns: repeat(1, 1fr);
+    }
 /* Drawing: 2 columns */
     .image-gallery[data-category="drawing"] {
       grid-template-columns: repeat(2, 1fr);
@@ -131,7 +134,7 @@
   <main>
     <section>
       <h2>About Me</h2>
-      <h3>Nadi Kyaw</h3>
+      <h3>My fullname is Nadi Kyaw. Can call me Nadi.😉✌️</h3>
       <p>M.Sc. Business Intelligence and Process Management<br>
       Berlin School of Economics and Law</p>
       <p>
@@ -143,8 +146,18 @@
     <section>
       <h2>Born and Raised</h2>
       <h3>Yangon, Myanmar</h3>
+      <p>Myanmar, also known as Burma, is shaped by its geography, with its upper part surrounded by mountains, including the steep, rugged eastern Himalayas. The country's lifeblood, the Irrawaddy River, flows through the middle, leading to the lower part, which is a fertile delta and coastline that meets the ocean (the Andaman Sea and Bay of Bengal).</p>
+      <p>Yangon, also known as Rangoon, where I was born and raised, is the commercial city.</p>
         <img src="https://www.tripsavvy.com/thmb/9JWrnLcZDR4paxVYMN-r2O5T3Co=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/view-of-shwedagon-pagoda-in-yangon--myanmar-3fa39fd4fd124c8787b365d33b917bf8.jpg" alt="View of Shwedagon Pagoda in Yangon, Myanmar" width="500" height="333">
         <img src="https://www.gomyanmartours.com/wp-content/uploads/2015/01/The-Map-of-Myanmar.png" alt="The Map of Myanmar" width="500" height="650px">
+    </section>
+
+    <section>
+      <h2>What I Want To</h2>
+      <p>Sleeping</p>
+      <div class="image-gallery" data-category="sleeping">
+        <img src="" alt="" width="100%" height=""/>
+      </div>
     </section>
 
     <section>
